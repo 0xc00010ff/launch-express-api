@@ -8,10 +8,9 @@
 var debug = require('debug')('app:config');
 
 if (!process.env.ENV || process.env.ENV == 'development') {
- console.log(require('dotenv').config({silent: true}));
+  var dotenv = require('dotenv').config({silent: true});
+  console.log(`dotenv ENV: ${JSON.stringify(dotenv, 0, 2)}`);
 }
-
-console.log(process.env.ENV);
 
 const mongo = {
  name: 'MongoDB',

@@ -19,7 +19,7 @@ const debug = require('debug')('app:main');
 const app = express();
 
 // connect to the db asap
-mongoose.connect(config.db.connection);
+mongoose.connect(config.db.connection, {useMongoClient: true});
 mongoose.set('debug', process.env.DEBUG);
 
 // view engine setup

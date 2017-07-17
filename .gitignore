@@ -26,6 +26,7 @@ coverage
 benchmarks/graphs
 
 # # ENVIRONMENT # #
+.env
 
 # # # Index # # #
 
